@@ -17,13 +17,6 @@ module.exports = Router.extend({
       page: parseInt(page, 10) || 1,
     });
 
-    // Basic URL for page 1
-    if(page === 1) {
-      this.navigate('/', {
-        trigger: false
-      });
-    }
-
     // Fetch
     model.fetch({
       data: {
