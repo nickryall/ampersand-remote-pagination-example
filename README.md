@@ -2,7 +2,7 @@
 
 Basic example for handling pagination. 
 
-Assumes the API returns an object with `totalRecords` which is a count of all the records and a `data` array with the current `page` of items.
+Assumes the API returns an object with `totalRecords` which is a count of all the records and a `data` array with the current `page` of items. Of course the names of these fields can be different as long as the corresponsing props are changed in the front-end models.
 
 ```
 {
@@ -18,7 +18,7 @@ Assumes the API returns an object with `totalRecords` which is a count of all th
 
 ## Set up
 
-* Run as a PHP application so the demo API can be accessed
+* Run as a PHP application so the demo API works
 * `npm install`
 * `gulp` to build the bundled js file.
 
