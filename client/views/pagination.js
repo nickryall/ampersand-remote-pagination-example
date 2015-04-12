@@ -19,6 +19,7 @@ module.exports = View.extend({
       forwardListItem: '[data-hook=forward-list-item]'
     });
 
+
     this.listenToAndRun(this.model, 'change:page', this.toggleBackButtonClass);
     this.listenToAndRun(this.model, 'change:page', this.toggleForwardButtonClass);
     return this;

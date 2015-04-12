@@ -9,8 +9,8 @@ module.exports = AmpModel.extend({
   },
   
   session: {
-    page: ['number', false, 1 ],
-    pageSize: ['number', false, 5 ],
+    page: ['number', false, 1 ], // The current page. 
+    pageSize: ['number', false, 5 ],  // Often an API will let you specify number of items per page. Note: The mock API for this demo will always return 5 items.
     fetching: ['boolean', false, false ] // Can be used to control display of list view. e.g. Listen to change on this prop and show/hide a spinner
   },
 
