@@ -12,7 +12,7 @@ module.exports = View.extend({
     this.listenTo(this.model, 'change:page', function() {
       this.model.fetchRemote();
       this.updateHistory();
-    });
+    }, this);
   },
 
   render: function (spec) {
