@@ -27,8 +27,7 @@ module.exports = View.extend({
 
   renderPagination: function() {
     this.renderSubview(new PaginationView({
-      model: this.model,
-      collection: this.collection
+      model: this.model
     }), '[data-hook~=article-list-pagination]');
   },
 
