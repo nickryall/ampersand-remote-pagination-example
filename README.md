@@ -4,7 +4,8 @@ Basic example for handling pagination.
 
 Assumes the API returns an object with `totalRecords` which is a count of all the records and a `data` array with the current `page` of items.
 
-```{
+```
+{
       "totalRecords" : 100,
       "data" : [
         {
@@ -12,7 +13,8 @@ Assumes the API returns an object with `totalRecords` which is a count of all th
         },
         // Continued...
       ]
-```}
+}
+```
 
 ## Set up
 
