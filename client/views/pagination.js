@@ -19,12 +19,13 @@ module.exports = View.extend({
       forwardListItem: '[data-hook=forward-list-item]'
     });
 
-
     this.listenToAndRun(this.model, 'change:page', this.toggleBackButtonClass);
     this.listenToAndRun(this.model, 'change:page', this.toggleForwardButtonClass);
+
     return this;
   },
 
+  // Disable the back button if on page 1
   toggleBackButtonClass: function() {
     if(this.model.page > 1) {
       dom.removeClass(this.backListItem, 'disabled');
@@ -33,12 +34,14 @@ module.exports = View.extend({
     }
   },
 
+  // Move back a page
   moveBack: function() {
     if(this.model.page > 1) {
       --this.model.page;
     }
   },
 
+  // Disable the forward button if on the last page
   toggleForwardButtonClass: function() {
     if(this.model.page < this.model.totalPages) {
       dom.removeClass(this.forwardListItem, 'disabled');
@@ -47,6 +50,7 @@ module.exports = View.extend({
     }
   },
 
+  // Move forward a page
   moveForward: function() {
     if(this.model.page < this.model.totalPages) {
       ++this.model.page;

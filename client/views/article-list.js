@@ -6,6 +6,8 @@ module.exports = View.extend({
   template: '<div><ul data-hook="article-list"></ul><div data-hook="article-list-pagination"></div></div>',
 
   initialize: function(options) {
+    // Listen to change of 'page' on the article-list model and fetch 
+    // the new page from the API. Also update the history.
     this.listenTo(this.model, 'change:page', function() {
       this.model.fetchRemote();
       this.updateHistory();
