@@ -1,5 +1,5 @@
 /*global router */
-var ArticleSet = require('./models/article-set');
+var ArticleListModel = require('./models/article-list');
 var ArticleListView = require('./views/article-list');
 var Router = require('ampersand-router');
 
@@ -13,7 +13,7 @@ module.exports = Router.extend({
   articles: function(page) {
     page = parseInt(page, 10) || 1;
 
-    var model = new ArticleSet({
+    var model = new ArticleListModel({
       page: parseInt(page, 10) || 1,
     });
 

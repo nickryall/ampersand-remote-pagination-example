@@ -28,9 +28,7 @@ module.exports = View.extend({
   },
 
   updateHistory: function() {
-    var url = '/page/' + this.model.page;
-
-    app.router.navigate(url, {
+    app.router.navigate('/page/' + this.model.page, {
       trigger: false
     });
   }
