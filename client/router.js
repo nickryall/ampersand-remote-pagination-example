@@ -14,7 +14,7 @@ module.exports = Router.extend({
     page = parseInt(page, 10) || 1;
 
     var model = new ArticleListModel({
-      page: parseInt(page, 10) || 1,
+      page: page
     });
 
     // Fetch
