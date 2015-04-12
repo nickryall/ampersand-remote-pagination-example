@@ -6,8 +6,8 @@ var Router = require('ampersand-router');
 module.exports = Router.extend({
   routes: {
     '': 'articles',
-    'page': 'redirectToHome', // No page number given - redirect to homepage.
-    'page/:page' : 'articles'
+    'page/:page' : 'articles',
+    '(*path)': 'redirectToHome', // Catch all. Note: Could redirect to 404 page here.
   },
 
   articles: function(page) {
@@ -39,13 +39,14 @@ module.exports = Router.extend({
       }.bind(this),
       error: function() {
         // Redirect to home if API returns 404.
+        // Note: You could redirect to a 404 page here also. 
         this.redirectToHome();
       }.bind(this)
     });
   },
 
-  redirect: function() {
-    this.redirectToHome('/');
+  redirectToHome: function() {
+    this.redirectTo('/');
   }
 });
 
