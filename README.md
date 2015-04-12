@@ -24,7 +24,7 @@ Assumes the API returns an object with `totalRecords` which is a count of all th
 
 ## Notes
 
-This demo uses a simple URL convention of `page/n`. If you would like to use query paramaters instead, e.g. `?page=n' checkout https://github.com/nickryall/ampersand-router-query-parameters
+This demo uses a simple URL convention of `page/n`. If you would like to use query paramaters instead, e.g. `?page=n` checkout https://github.com/nickryall/ampersand-router-query-parameters
 
 
 
