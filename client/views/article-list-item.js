@@ -1,4 +1,4 @@
-var dom = require('ampersand-dom');
+// Article List Item View - article-list-item.js
 var View = require('ampersand-view');
 
 module.exports = View.extend({

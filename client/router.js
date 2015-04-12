@@ -7,7 +7,7 @@ module.exports = Router.extend({
   routes: {
     '': 'articles',
     'page/:page' : 'articles',
-    '(*path)': 'redirectToHome', // Catch all. Note: Could redirect to 404 page here.
+    '(*path)': 'redirectToHome', // Catch all. Note: Could redirect to 404 page here
   },
 
   articles: function(page) {
@@ -17,20 +17,21 @@ module.exports = Router.extend({
       page: parseInt(page, 10) || 1,
     });
 
-    // Basic URL for page 1.
+    // Basic URL for page 1
     if(page === 1) {
       this.navigate('/', {
         trigger: false
       });
     }
 
+    // Fetch
     model.fetch({
       data: {
         page: model.page,
         pageSize: model.pageSize
       },
       success: function(model, response) {
-        // init our main view
+        // Render the article list view
         new ArticleListView({
           model: model,
           collection: model.data,

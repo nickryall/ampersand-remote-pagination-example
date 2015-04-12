@@ -1,3 +1,4 @@
+// Article List Model - article-list.js
 var AmpModel = require('ampersand-model');
 var ArticlesCollection = require('./articles');
 

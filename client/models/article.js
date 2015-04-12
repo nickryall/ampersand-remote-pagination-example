@@ -1,4 +1,4 @@
-// Topic Model - topic.js
+// Article Model - article.js
 var AmpModel = require('ampersand-model');
 
 

@@ -1,6 +1,6 @@
+// Pagination View - pagination.js
 var dom = require('ampersand-dom');
 var View = require('ampersand-view');
-
 
 module.exports = View.extend({
   template: '<div><ul class="pagination"><li data-hook="back-list-item"><a data-hook="back-button">&laquo; Previous Page</a></li><li data-hook="forward-list-item"><a data-hook="forward-button">Next Page &raquo;</a></li></ul></div>',
@@ -21,6 +21,11 @@ module.exports = View.extend({
 
     this.listenToAndRun(this.model, 'change:page', this.toggleBackButtonClass);
     this.listenToAndRun(this.model, 'change:page', this.toggleForwardButtonClass);
+
+    // NOTE: You could easily render a button for each page number here. 
+    // for( i=0; i<this.model.totalPages; i++ ) {
+          // Render button here
+    // }
 
     return this;
   },
