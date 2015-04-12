@@ -1,0 +1,12 @@
+{
+  "name": "ampersand-remote-pagination-example",
+  "description": "Example code for remote pagination with Ampersand JS",
+  "author": "Nick Ryall",
+  "devDependencies": {
+    "browserify": "^9.0.8",
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.1.0"
+  }
+}

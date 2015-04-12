@@ -1,1 +1,5 @@
-# ampersand-remote-pagination-example
+# Remote Pagination Example with Ampersand JS
+
+
+
+
